@@ -1,0 +1,452 @@
+/* ── Reset & Base ── */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f0f7ff;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ── Navbar ── */
+.navbar {
+    background: linear-gradient(90deg, #0077b6, #00b4d8);
+    color: white;
+    padding: 16px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.2);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .brand {
+    font-size: 1.6rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.nav-links a {
+    color: white;
+    margin-left: 24px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: opacity 0.2s;
+}
+
+.nav-links a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+.nav-links span {
+    color: white;
+    margin-left: 20px;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+/* ── Buttons ── */
+.btn-primary {
+    background: white;
+    color: #0077b6;
+    padding: 10px 24px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 700;
+    transition: all 0.2s;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background: #e0f7fa;
+    transform: scale(1.05);
+}
+
+.full-width {
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #0077b6, #00b4d8);
+    color: white;
+}
+
+.full-width:hover {
+    background: linear-gradient(90deg, #005f8e, #0099bb);
+    color: white;
+    transform: none;
+}
+
+.btn-small {
+    background: #0077b6;
+    color: white;
+    padding: 6px 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+.btn-small:hover {
+    background: #005f8e;
+}
+
+/* ── Hero Section ── */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background:
+            linear-gradient(rgba(0,80,120,0.75), rgba(0,100,150,0.75)),
+            url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1600')
+            center/cover no-repeat;
+    color: white;
+    min-height: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 16px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    font-weight: 800;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 32px;
+    opacity: 0.95;
+    max-width: 600px;
+}
+
+.hero .btn-primary {
+    background: white;
+    color: #0077b6;
+    padding: 14px 36px;
+    font-size: 1.05rem;
+    border-radius: 30px;
+    font-weight: 700;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* ── Features ── */
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    padding: 60px 30px;
+    flex-wrap: wrap;
+    background: #f0f7ff;
+}
+
+.feature-card {
+    background: white;
+    border-radius: 16px;
+    padding: 36px 28px;
+    width: 300px;
+    box-shadow: 0 4px 20px rgba(0,119,182,0.1);
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border-top: 4px solid #00b4d8;
+}
+
+.feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 30px rgba(0,119,182,0.2);
+}
+
+.feature-card h3 {
+    margin-bottom: 12px;
+    color: #0077b6;
+    font-size: 1.2rem;
+}
+
+.feature-card p {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+}
+
+.feature-card ul {
+    text-align: left;
+    color: #555;
+    font-size: 0.9rem;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.feature-card ul li {
+    margin-bottom: 6px;
+}
+
+/* ── How It Works ── */
+.how-it-works {
+    background: linear-gradient(135deg, #0077b6, #00b4d8);
+    padding: 60px 20px;
+    text-align: center;
+    color: white;
+}
+
+.how-it-works h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    font-weight: 800;
+}
+
+.steps {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.step {
+    width: 180px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 16px;
+    padding: 24px 16px;
+    backdrop-filter: blur(5px);
+}
+
+.step-icon {
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+}
+
+.step h4 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.step p {
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+/* ── Footer ── */
+.footer {
+    text-align: center;
+    padding: 24px;
+    background: #023e8a;
+    color: rgba(255,255,255,0.85);
+    font-size: 0.9rem;
+}
+
+/* ── Auth Pages ── */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    background:
+            linear-gradient(rgba(0,80,120,0.6), rgba(0,100,150,0.6)),
+            url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1600')
+            center/cover no-repeat;
+}
+
+.auth-box {
+    background: white;
+    padding: 44px;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 440px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.2);
+}
+
+.auth-box h2 {
+    text-align: center;
+    margin-bottom: 28px;
+    color: #0077b6;
+    font-size: 1.6rem;
+    font-weight: 800;
+}
+
+.auth-link {
+    text-align: center;
+    margin-top: 18px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.auth-link a {
+    color: #0077b6;
+    font-weight: 600;
+}
+
+/* ── Forms ── */
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #444;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 11px 16px;
+    border: 1.5px solid #ddd;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s;
+    background: #fafafa;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #0077b6;
+    background: white;
+}
+
+.form-card {
+    background: white;
+    padding: 36px;
+    border-radius: 16px;
+    max-width: 620px;
+    box-shadow: 0 4px 20px rgba(0,119,182,0.1);
+    border-top: 4px solid #00b4d8;
+}
+
+/* ── Alerts ── */
+.alert {
+    padding: 12px 18px;
+    border-radius: 8px;
+    margin-bottom: 18px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.alert.error {
+    background: #fdecea;
+    color: #c62828;
+    border: 1px solid #f5c6c6;
+}
+
+.alert.success {
+    background: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #c8e6c9;
+}
+
+/* ── Container ── */
+.container {
+    max-width: 980px;
+    margin: 36px auto;
+    padding: 0 24px;
+}
+
+.container h2 {
+    margin-bottom: 24px;
+    color: #0077b6;
+    font-size: 1.6rem;
+    font-weight: 800;
+}
+
+/* ── Table ── */
+.table-wrapper {
+    overflow-x: auto;
+    border-radius: 12px;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,119,182,0.1);
+}
+
+.data-table th {
+    background: linear-gradient(90deg, #0077b6, #00b4d8);
+    color: white;
+    padding: 16px 18px;
+    text-align: left;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.data-table td {
+    padding: 14px 18px;
+    border-bottom: 1px solid #eef4fb;
+    font-size: 0.9rem;
+    color: #444;
+}
+
+.data-table tr:last-child td {
+    border-bottom: none;
+}
+
+.data-table tr:hover td {
+    background: #f0f7ff;
+}
+
+/* ── Status Badges ── */
+.badge {
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.badge.pending {
+    background: #fff3e0;
+    color: #e65100;
+}
+
+.badge.completed {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.badge.cancelled {
+    background: #fdecea;
+    color: #c62828;
+}
+
+/* ── Status Select ── */
+.status-select {
+    padding: 6px 10px;
+    border: 1.5px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    margin-right: 6px;
+}
+
+/* ── Empty State ── */
+.empty-state {
+    text-align: center;
+    padding: 70px;
+    color: #888;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,119,182,0.1);
+}
+
+.empty-state a {
+    color: #0077b6;
+    font-weight: 600;
+}

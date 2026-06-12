@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+         http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0">
+
+  <display-name>Patient Appointment System</display-name>
+
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+
+  <!-- Register Servlet -->
+  <servlet>
+    <servlet-name>RegisterServlet</servlet-name>
+    <servlet-class>com.healthcare.servlet.RegisterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegisterServlet</servlet-name>
+    <url-pattern>/register</url-pattern>
+  </servlet-mapping>
+
+  <!-- Login Servlet -->
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.healthcare.servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+
+  <!-- Logout Servlet -->
+  <servlet>
+    <servlet-name>LogoutServlet</servlet-name>
+    <servlet-class>com.healthcare.servlet.LogoutServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LogoutServlet</servlet-name>
+    <url-pattern>/logout</url-pattern>
+  </servlet-mapping>
+
+  <!-- Book Appointment Servlet -->
+  <servlet>
+    <servlet-name>BookAppointmentServlet</servlet-name>
+    <servlet-class>com.healthcare.servlet.BookAppointmentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BookAppointmentServlet</servlet-name>
+    <url-pattern>/patient/book</url-pattern>
+  </servlet-mapping>
+
+  <!-- Patient Dashboard Servlet -->
+  <servlet>
+    <servlet-name>PatientDashboardServlet</servlet-name>
+    <servlet-class>com.healthcare.servlet.PatientDashboardServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PatientDashboardServlet</servlet-name>
+    <url-pattern>/patient/appointments</url-pattern>
+  </servlet-mapping>
+
+  <!-- Doctor Dashboard Servlet -->
+  <servlet>
+    <servlet-name>DoctorDashboardServlet</servlet-name>
+    <servlet-class>com.healthcare.servlet.DoctorDashboardServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DoctorDashboardServlet</servlet-name>
+    <url-pattern>/doctor/dashboard</url-pattern>
+  </servlet-mapping>
+
+</web-app>
