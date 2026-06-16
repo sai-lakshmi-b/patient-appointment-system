@@ -7,11 +7,11 @@ import java.sql.SQLException;
 public class DBConnection {
 
     private static final String URL =
-            "jdbc:mysql://localhost:3306/healthcare_db?useSSL=false&serverTimezone=UTC";
+            "jdbc:mysql://mysql.railway.internal:3306/railway?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true";
 
     private static final String USER = "root";
 
-    private static final String PASSWORD = "Sai@#1234"; // ← Change this!
+    private static final String PASSWORD = "oSHDCErPffkPmmmoHpJgoxuPyckrkezO";
 
     public static Connection getConnection() throws SQLException {
         try {
